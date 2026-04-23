@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>For My Wifeyyyyy | A Heartfelt Apology With Music</title>
+  <!-- Google Fonts: romantic & soft -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #ffefea 0%, #ffe0db 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* floating romantic particles (hearts & sparkles) */
+    .floating-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart-particle {
+      position: absolute;
+      color: rgba(255, 100, 120, 0.3);
+      font-size: 1.8rem;
+      user-select: none;
+      animation: floatUp 12s infinite ease-in-out;
+      bottom: -50px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.6;
+      }
+      80% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(20deg);
+        opacity: 0;
+      }
+    }
+
+    /* main card - ultra romantic + MOBILE RESPONSIVE */
+    .apology-card {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 248, 245, 0.97);
+      backdrop-filter: blur(3px);
+      border-radius: 72px 72px 80px 80px;
+      box-shadow: 0 40px 70px rgba(200, 80, 70, 0.2), 0 15px 30px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255,255,240,0.9);
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 210, 190, 0.9);
+    }
+
+    .content-inner {
+      padding: 2.5rem 1.8rem 2.8rem;
+      text-align: center;
+    }
+
+    /* enchanted rose accent */
+    .rose-icon {
+      font-size: 3.8rem;
+      color: #e66767;
+      text-shadow: 0 6px 12px rgba(220, 80, 70, 0.2);
+      margin-bottom: 1rem;
+      animation: gentleSway 3s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @keyframes gentleSway {
+      0%, 100% { transform: rotate(-3deg) translateY(0px); }
+      50% { transform: rotate(3deg) translateY(-5px); }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #b34b4b, #e68a7a, #c45c5c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #b3584b;
+      background: #fff0ea;
+      display: inline-block;
+      padding: 0.25rem 1.2rem;
+      border-radius: 40px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+      backdrop-filter: blur(2px);
+    }
+
+    .love-message {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #3e2c27;
+      background: rgba(255, 245, 240, 0.7);
+      padding: 1.2rem 1.5rem;
+      border-radius: 48px;
+      margin: 1.5rem 0;
+      font-weight: 400;
+      border-left: 5px solid #f3a683;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .love-message i {
+      color: #e66767;
+      margin-right: 8px;
+    }
+
+    .heartbeat-quote {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #ad6b5e;
+      margin: 0.8rem 0 1.5rem;
+      background: #fff3ef;
+      padding: 0.7rem;
+      border-radius: 50px;
+      display: inline-block;
+      width: auto;
+    }
+
+    /* THE BUTTON - big & touch-friendly */
+    .madam-btn {
+      display: inline-block;
+      background: linear-gradient(105deg, #e4615c, #e67e6a);
+      border: none;
+      padding: 1rem 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 12px 20px -8px rgba(210, 80, 70, 0.5);
+      transition: all 0.25s ease;
+      margin-top: 1rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 1.5px;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255, 220, 200, 0.7);
+      width: auto;
+      min-width: 260px;
+    }
+
+    .madam-btn i {
+      margin-right: 10px;
+      font-size: 1.4rem;
+      vertical-align: middle;
+    }
+
+    .madam-btn:hover {
+      transform: scale(1.02);
+      background: linear-gradient(105deg, #e5514b, #e76f5a);
+      box-shadow: 0 18px 28px -8px #c55a4b;
+    }
+
+    .madam-btn:active {
+      transform: scale(0.98);
+    }
+
+    .candle-love {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 1.5rem 0 0.5rem;
+      color: #e6a07c;
+      font-size: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .candle-love i {
+      opacity: 0.8;
+      animation: flicker 2s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 0.7; text-shadow: 0 0 2px #ffab7b; }
+      50% { opacity: 1; text-shadow: 0 0 10px #ff8c5a; }
+    }
+
+    .signature {
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      color: #c1816e;
+      border-top: 1px dashed #ffcfbf;
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* ========== EXTRA MOBILE RESPONSIVENESS ========== */
+    @media (max-width: 650px) {
+      body {
+        padding: 1rem;
+      }
+      .content-inner {
+        padding: 1.8rem 1.2rem 2rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .rose-icon {
+        font-size: 2.8rem;
+      }
+      .madam-btn {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.4rem;
+        min-width: 220px;
+      }
+      .madam-btn i {
+        font-size: 1.2rem;
+      }
+      .love-message {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .subhead {
+        font-size: 0.85rem;
+        padding: 0.2rem 1rem;
+      }
+      .heartbeat-quote {
+        font-size: 0.85rem;
+      }
+      .candle-love {
+        gap: 18px;
+        font-size: 1.2rem;
+      }
+      .signature {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      h1 {
+        font-size: 1.9rem;
+      }
+      .madam-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+        min-width: 200px;
+      }
+      .love-message {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="floating-bg" id="floatingHearts"></div>
+
+<div class="apology-card">
+  <div class="content-inner">
+    <div class="rose-icon">
+      <i class="fas fa-heart"></i> <i class="fas fa-rose"></i> <i class="fas fa-heart"></i>
+    </div>
+    <h1>🌸 My wifeyyyyy 🌸</h1>
+    <div class="subhead">
+      <i class="fas fa-feather-alt"></i> from the deepest corner of my heart
+    </div>
+
+    <div class="love-message">
+      <i class="fas fa-quote-left"></i> Every moment away from your smile feels like a thousand autumns.
+      I know my words cannot undo the hurt, but my love for you is bigger than any mistake.
+      You are the poetry that makes my world bright, the reason I want to be better every single day.
+      Forgive me, my maaaaaaa — your happiness is my eternal sunrise. <i class="fas fa-quote-right"></i>
+    </div>
+
+    <div class="heartbeat-quote">
+      <i class="fas fa-heartbeat"></i> “Your forgiveness is my deepest wish — without you, even stars feel dim.” <i class="fas fa-star-of-life"></i>
+    </div>
+
+    <!-- Madam ji button with updated text -->
+    <button class="madam-btn" id="magicApologyBtn">
+      <i class="fas fa-hand-peace"></i> Madam ji please click this <i class="fas fa-arrow-right"></i>
+    </button>
+
+    <div class="candle-love">
+      <i class="fas fa-crown"></i>  <i class="fas fa-infinity"></i>  <i class="fas fa-heart"></i>  <i class="fas fa-gem"></i>
+    </div>
+
+    <div class="signature">
+      <span>🌹 Yours forever, with folded hands 🌹</span>
+      <span>❤️ Your man always ❤️</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ========== 1. MUSIC LOGIC ==========
+  // We'll create an audio element that loads "1.mp3" from the same directory
+  let bgMusic = null;
+  let isMusicPlaying = false;
+
+  // Function to initialize and play music (called on first button click)
+  function initAndPlayMusic() {
+    if (!bgMusic) {
+      bgMusic = new Audio('1.mp3');
+      bgMusic.loop = true;   // romantic loop
+      bgMusic.volume = 0.65; // soft background volume
+      // Optional: preload to make it snappy
+      bgMusic.preload = 'auto';
+    }
+    // Play music (autoplay policies usually require user interaction -> our button click handles it perfectly)
+    bgMusic.play().then(() => {
+      isMusicPlaying = true;
+    }).catch(error => {
+      console.warn("Audio play failed: ", error);
+      // fallback: show a tiny note but not intrusive
+    });
+  }
+
+  // Function to stop music (when modal is closed)
+  function stopMusic() {
+    if (bgMusic && !bgMusic.paused) {
+      bgMusic.pause();
+      bgMusic.currentTime = 0; // reset to beginning for next click (optional)
+      isMusicPlaying = false;
+    }
+  }
+
+  // ========== 2. FLOATING PARTICLES (unchanged, mobile-friendly) ==========
+  function createFloatingElement() {
+    const container = document.getElementById('floatingHearts');
+    if (!container) return;
+    const icons = ['❤️', '🌸', '✨', '🌹', '💖', '🍃', '⭐', '💗', '🌺'];
+    const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+    const particle = document.createElement('div');
+    particle.classList.add('heart-particle');
+    particle.innerHTML = randomIcon;
+    const size = Math.random() * 28 + 16;
+    particle.style.fontSize = size + 'px';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDuration = Math.random() * 10 + 8 + 's';
+    particle.style.animationDelay = Math.random() * 5 + 's';
+    particle.style.opacity = Math.random() * 0.5 + 0.2;
+    particle.style.position = 'absolute';
+    particle.style.bottom = '-20px';
+    container.appendChild(particle);
+
+    setTimeout(() => {
+      if (particle && particle.remove) particle.remove();
+    }, 15000);
+  }
+
+  let interval = setInterval(() => {
+    createFloatingElement();
+  }, 800);
+  for(let i=0;i<12;i++) setTimeout(() => createFloatingElement(), i*200);
+
+  // ========== 3. CONFETTI BURST (romantic celebration) ==========
+  function burstConfetti() {
+    const canvas = document.createElement('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '9999';
+    document.body.appendChild(canvas);
+    
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    let particles = [];
+    const colors = ['#ff6b6b', '#ff8e72', '#ffb48a', '#ffc3a0', '#f7c7b9', '#e66767', '#f3a683', '#ff9f8f', '#ff85a1'];
+    const particleCount = 170;
+    
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: canvas.width/2 + (Math.random() - 0.5) * 70,
+        y: canvas.height/2,
+        size: Math.random() * 8 + 3,
+        speedX: (Math.random() - 0.5) * 14,
+        speedY: (Math.random() - 1.5) * 15 - 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1,
+        rotation: Math.random() * 360,
+        spin: (Math.random() - 0.5) * 10
+      });
+    }
+    
+    let animationId;
+    let startTime = performance.now();
+    const duration = 1900;
+    
+    function animateConfetti(now) {
+      const elapsed = now - startTime;
+      if (elapsed >= duration) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        cancelAnimationFrame(animationId);
+        canvas.remove();
+        return;
+      }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        p.speedY += 0.27;
+        p.rotation += p.spin;
+        p.alpha = Math.max(0, 1 - (elapsed / duration) * 1.2);
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation * Math.PI / 180);
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+        ctx.restore();
+      }
+      animationId = requestAnimationFrame(animateConfetti);
+    }
+    animationId = requestAnimationFrame(animateConfetti);
+  }
+
+  // ========== 4. CUSTOM APOLOGY MESSAGE (exactly as requested) ==========
+  const customApologyMessage = `Hello vanilla.... At first I am sorryyyyyyyyyyyy... 😭🙏 Ami jani j besi boke diyechi T_T 😔... But i do love you manali... more than you imagine T_T 💕✨ Love you love youuuuuuuuuuuuuuuuuuuuuuuuuuuuu sososososososososssssoooooooo muchhhhhhh 😭💖💖💖💖💖💖💖🌹😘`;
+
+  // Show modal (with music stop on close)
+  function showRomanticApologyModal() {
+    const modalOverlay = document.createElement('div');
+    modalOverlay.style.position = 'fixed';
+    modalOverlay.style.top = '0';
+    modalOverlay.style.left = '0';
+    modalOverlay.style.width = '100%';
+    modalOverlay.style.height = '100%';
+    modalOverlay.style.backgroundColor = 'rgba(0,0,0,0.55)';
+    modalOverlay.style.backdropFilter = 'blur(5px)';
+    modalOverlay.style.display = 'flex';
+    modalOverlay.style.alignItems = 'center';
+    modalOverlay.style.justifyContent = 'center';
+    modalOverlay.style.zIndex = '10000';
+    modalOverlay.style.fontFamily = "'Poppins', sans-serif";
+    
+    const modalCard = document.createElement('div');
+    modalCard.style.maxWidth = '500px';
+    modalCard.style.width = '90%';
+    modalCard.style.background = '#fffaf7';
+    modalCard.style.borderRadius = '56px';
+    modalCard.style.padding = '1.8rem 1.5rem 2rem';
+    modalCard.style.textAlign = 'center';
+    modalCard.style.boxShadow = '0 35px 50px rgba(0,0,0,0.3), 0 0 0 3px rgba(255,200,180,0.8)';
+    modalCard.style.animation = 'softAppear 0.3s ease-out';
+    modalCard.style.border = '1px solid #ffe0d4';
+    
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = `
+      @keyframes softAppear {
+        0% { opacity: 0; transform: scale(0.92); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+    
+    // Format message with preserved linebreaks & emojis
+    const formattedMessage = customApologyMessage.replace(/\n/g, '<br>');
+    
+    modalCard.innerHTML = `
+      <div style="font-size: 3rem; margin-bottom: 10px;">🌹💗</div>
+      <h2 style="font-family: 'Playfair Display', serif; color:#b3433c; font-size: 1.8rem; margin-bottom: 0.6rem;">My Vanilla 💕</h2>
+      <div style="font-size: 1rem; line-height: 1.65; color:#4a2a22; margin: 0.8rem 0; background: #fff2ec; padding: 1.2rem; border-radius: 40px; text-align: left; max-height: 55vh; overflow-y: auto; word-break: break-word;">
+        ${formattedMessage}
+      </div>
+      <div style="margin: 0.6rem 0 0.2rem;">
+        <i class="fas fa-heart" style="color:#e66767; font-size: 1.5rem;"></i> 
+        <i class="fas fa-kiss-wink-heart" style="color:#e66767; font-size: 1.5rem; margin:0 6px;"></i>
+        <i class="fas fa-hand-holding-heart" style="color:#e66767; font-size: 1.5rem;"></i>
+      </div>
+      <button id="closeModalBtn" style="background:#e66767; border:none; color:white; font-size:1rem; padding:0.7rem 1.8rem; border-radius:60px; margin-top:1rem; font-weight:500; cursor:pointer; transition:0.2s; box-shadow:0 5px 12px rgba(0,0,0,0.15);">Close &nbsp;❤️</button>
+    `;
+    
+    modalOverlay.appendChild(modalCard);
+    document.body.appendChild(modalOverlay);
+    
+    const closeBtn = modalCard.querySelector('#closeModalBtn');
+    const closeModal = () => {
+      // STOP MUSIC when modal is closed
+      stopMusic();
+      modalOverlay.style.opacity = '0';
+      setTimeout(() => {
+        if(modalOverlay && modalOverlay.remove) modalOverlay.remove();
+        if(styleSheet && styleSheet.remove) styleSheet.remove();
+      }, 200);
+    };
+    closeBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+      if(e.target === modalOverlay) closeModal();
+    });
+  }
+
+  // ========== 5. HANDLE BUTTON CLICK (Music starts + all effects) ==========
+  let clickCount = 0;
+  let musicStarted = false;   // ensure we start music only once per session? but we can start each click? better start on first click and never stop until modal close.
+  // However requirement: music plays when she clicks "Madam ji please click this" and stops when she clicks close.
+  // If she clicks again after closing the modal, we should play music again and show modal again.
+  // So we implement: on each button click: if music not playing or music doesn't exist, start playing, show modal.
+  // But to keep consistent: each click will ensure music playback (if already playing, keep playing; if stopped from previous close, start again).
+  
+  function handleMadamClick() {
+    clickCount++;
+    
+    // 1. Start / resume music (if not playing or paused)
+    if (!bgMusic) {
+      bgMusic = new Audio('1.mp3');
+      bgMusic.loop = true;
+      bgMusic.volume = 0.65;
+      bgMusic.preload = 'auto';
+    }
+    
+    // Play music: if paused or stopped, play it.
+    const playPromise = bgMusic.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        isMusicPlaying = true;
+      }).catch(err => {
+        console.log("Audio autoplay blocked? but user clicked so should work", err);
+        // fallback retry
+        setTimeout(() => { if(bgMusic) bgMusic.play().catch(e=>console.log); }, 100);
+      });
+    }
+    
+    // 2. Confetti burst
+    burstConfetti();
+    
+    // 3. Show the apology modal (with the full custom message)
+    showRomanticApologyModal();
+    
+    // 4. Extra floating hearts from button area (cute effect)
+    const btnRect = apologyBtn.getBoundingClientRect();
+    for (let i = 0; i < 22; i++) {
+      const extraHeart = document.createElement('div');
+      const heartEmojis = ['❤️','💖','🌸','🌹','💗','😭','💕','💘','✨'];
+      extraHeart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      extraHeart.style.position = 'fixed';
+      extraHeart.style.left = btnRect.left + btnRect.width/2 + (Math.random() - 0.5)*70 + 'px';
+      extraHeart.style.top = btnRect.top + btnRect.height/2 + 'px';
+      extraHeart.style.fontSize = (Math.random() * 24 + 16) + 'px';
+      extraHeart.style.pointerEvents = 'none';
+      extraHeart.style.zIndex = '10001';
+      extraHeart.style.opacity = '0.95';
+      extraHeart.style.transition = 'all 1.2s ease-out';
+      document.body.appendChild(extraHeart);
+      const xShift = (Math.random() - 0.5) * 140;
+      const yShift = (Math.random() - 1.3) * 120 - 60;
+      setTimeout(() => {
+        extraHeart.style.transform = `translate(${xShift}px, ${yShift}px)`;
+        extraHeart.style.opacity = '0';
+      }, 10);
+      setTimeout(() => extraHeart.remove(), 1300);
+    }
+    
+    // Extra cute messages for multiple clicks (optional, doesn’t break anything)
+    if(clickCount === 2) {
+      setTimeout(() => {
+        const extraMsg = document.createElement('div');
+        extraMsg.innerHTML = "💗 Manali, you mean the universe to me! 💗";
+        extraMsg.style.position = 'fixed';
+        extraMsg.style.bottom = '40px';
+        extraMsg.style.left = '50%';
+        extraMsg.style.transform = 'translateX(-50%)';
+        extraMsg.style.background = '#ffded2';
+        extraMsg.style.padding = '8px 20px';
+        extraMsg.style.borderRadius = '50px';
+        extraMsg.style.fontWeight = 'bold';
+        extraMsg.style.color = '#b3453a';
+        extraMsg.style.zIndex = '9999';
+        extraMsg.style.fontSize = '0.9rem';
+        extraMsg.style.whiteSpace = 'nowrap';
+        extraMsg.style.boxShadow = '0 5px 14px rgba(0,0,0,0.1)';
+        document.body.appendChild(extraMsg);
+        setTimeout(() => extraMsg.remove(), 2800);
+      }, 500);
+    }
+    
+    if(clickCount === 5) {
+      setTimeout(() => {
+        const bigMsg = document.createElement('div');
+        bigMsg.innerHTML = "😭😭😭 I LOVE YOU SO MUCH MANALI... FORGIVE ME PLEASE 😭😭😭";
+        bigMsg.style.position = 'fixed';
+        bigMsg.style.bottom = '80px';
+        bigMsg.style.left = '50%';
+        bigMsg.style.transform = 'translateX(-50%)';
+        bigMsg.style.background = '#ffc2b0';
+        bigMsg.style.padding = '10px 24px';
+        bigMsg.style.borderRadius = '60px';
+        bigMsg.style.fontWeight = 'bold';
+        bigMsg.style.fontSize = '1rem';
+        bigMsg.style.color = '#9e2e22';
+        bigMsg.style.zIndex = '9999';
+        bigMsg.style.textAlign = 'center';
+        bigMsg.style.whiteSpace = 'nowrap';
+        bigMsg.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+        document.body.appendChild(bigMsg);
+        setTimeout(() => bigMsg.remove(), 4000);
+      }, 400);
+    }
+  }
+  
+  const apologyBtn = document.getElementById('magicApologyBtn');
+  apologyBtn.addEventListener('click', handleMadamClick);
+  
+  // tiny startup pulse
+  setTimeout(() => {
+    apologyBtn.style.transform = 'scale(1.01)';
+    setTimeout(() => { apologyBtn.style.transform = ''; }, 300);
+  }, 500);
+  
+  // Cleanup interval on page unload
+  window.addEventListener('beforeunload', () => {
+    if(interval) clearInterval(interval);
+    if(bgMusic) {
+      bgMusic.pause();
+      bgMusic = null;
+    }
+  });
+</script>
+</body>
+</html>
